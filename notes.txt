@@ -1,0 +1,22 @@
+1.UI-Router 
+
+   UI-Routing with single state and dynamic paramters
+   -- All partials are loaded using ui-view
+   -- "courseDetails" state with "name" and "link" URL paramters
+   -- Based on URL paramters showing tutorial links will be decided
+   
+2.  communication between controllers
+
+    Provided Registration name and email values are passed to after registration page through service
+	
+3.page animations are implemented for all transitions
+
+4.Filter and search implemented in webinar details table.
+ Click on header to sort
+ Type the text in search box
+ 
+5.Phone format is done
+6.currency format is done
+7.sum of numbers is done
+8.Input max length custom validation
+9.RequireJS implemented

@@ -1,0 +1,229 @@
+<!doctype HTML>
+<head>
+<title>
+	
+	WalletHub
+</title>
+<meta charset="utf-8"></meta>
+<script src="data.js"></script>
+ 
+
+ <!--Libaries-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!--<script src="libs/require.js" data-main="main.js"></script>-->
+
+
+
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+   <!-- <script src="libs/ui-bootstrap-tpls-2.0.0.min.js"></script>-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.13/angular-animate.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <script src="app.js"></script>     
+    <script src="data.js"></script>
+    <script src="services/services.js"></script>
+    <script src="Directives/directives.js"></script>
+    <script src="controller/detailsController.js"></script>
+    <script src="controller/registerController.js"></script>
+    <script src="controller/registerSuccessController.js"></script>
+ 
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+
+    <script>
+    /*  (function(){
+        require(['main', function(){
+
+        }]);
+    }());*/
+
+
+      /* $(document).ready(function(){
+         $('.carousel').carousel({
+           interval: 500
+        })
+     });    */
+    </script>
+  	<style>
+    @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css")
+  	 a:hover{
+  		cursor: pointer;
+  		cursor: hand;
+  		text-decoration: none
+
+  	}
+    .regHeader{
+      color:red;
+    }
+    .search-box{
+      padding:20px 0px 60px 0px;
+    }
+    .search-icon{
+    margin:0px !important;
+    position: relative;
+    left:25px;
+    }
+
+    .webinar-header{
+      color:green;
+    }
+    
+    .webinar-rowheader{
+      color:white !important;
+      font-weight: bold !important;
+      background-color:#4EADDB !important;
+
+    }
+     .header-title:hover{
+      cursor: pointer;
+      cursor: hand;
+
+    }
+    .form-control{
+      margin-bottom: 20px;
+    }
+    .form-cotrol input [type='text'],.form-cotrol input [type='text']:focus{
+      background-color: #eee !important;
+    }
+    .creditNo{
+      margin-right:5px;
+      border:2px solid black !important;
+      outline: none !important;
+    }
+
+    .submit{
+      margin-top:10px;
+    }
+
+    .ui-view-container {
+  position: relative;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .9s ease-in-out;
+  -moz-transition:all .9s ease-in-out;
+  -o-transition:all .9s ease-in-out;
+  transition:all .s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  /*padding-left: 0px;*/  
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  /*padding-left: 100px;*/
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}
+
+.navHeader{
+   background: #38383a;
+}
+.navHeader img{
+  padding:10px;
+  padding-left: 40px;
+}
+.navHeader h1{
+  color:#ffffff !important;
+   position: relative;
+   top:-30px;
+}
+
+.navHeader li >a{
+      font-size: 20px;
+      padding: 41px 13px 38px 13px;
+      color:#38383a;
+}
+.navHeader li >a:hover,.navHeader li >a:active,.navHeader li >a:focus{
+      background-color: #4EADDB !important;
+      border:2px #4EADDB solid !important;
+}
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      height:200px;
+      margin: auto;
+  }
+  .left .carousel-control{
+    padding-top:50px;
+     }
+  	
+ 
+.register-btn{
+      background-color: #4EADDB !important;
+      border:2px #4EADDB solid !important;
+      width:150px;
+      font-size:25px;
+      color:white;
+      font-weight: bold;
+      position: relative;
+      top:200px;
+      left:50px;
+
+}
+.required{
+  color:red;
+  font-weight: bold;
+  font-size:20px;
+}
+.fill-msg{
+color:green;
+  font-weight: bold;
+  font-size:20px;
+
+}
+</style>
+</head>
+<body ng-app="eLearningApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse navHeader" role="navigation">
+    <div class="navbar-header">
+       <img src="images/elearn.jpg"></img>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="register">Register</a></li>
+         <li><a ui-sref="home">Courses</a></li>
+        <li><a ui-sref="#">Contacts</a></li>
+         <li><a ui-sref="#">Search</a></li>
+        <li><a ui-sref="#">Help</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container ui-view-container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
+
+</body>
+
+</html>
